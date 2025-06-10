@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in javascript</title>
+</head>
+
+<body>
+    <h2>Amazing images</h2>
+    <div>
+    <ul id="images">
+        <li><img width="200px" id="scorpian" https://www.google.com/imgres?q=images&imgurl=https%3A%2F%2Fletsenhance.io%2Fstatic%2F8f5e523ee6b2479e26ecc91b9c25261e%2F1015f%2FMainAfter.jpg&imgrefurl=https%3A%2F%2Fletsenhance.io%2F&docid=-t22bY2ix3gHaM&tbnid=tYmxDgFq4MrkJM&vet=12ahUKEwjM0LT3oeuKAxUpRmwGHa8dC3wQM3oECGIQAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwjM0LT3oeuKAxUpRmwGHa8dC3wQM3oECGIQAA alt="scorpian"></li>
+        <li><img width="200px" id="eagle" https://www.google.com/imgres?q=images&imgurl=https%3A%2F%2Fimg.freepik.com%2Ffree-photo%2Fanimal-eye-staring-close-up-watch-nature-generative-ai_188544-15471.jpg&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fultra-hd-realism&docid=xpdCMxbBmDELVM&tbnid=rHWomAg7aKxleM&vet=12ahUKEwjM0LT3oeuKAxUpRmwGHa8dC3wQM3oECCQQAA..i&w=626&h=358&hcb=2&itg=1&ved=2ahUKEwjM0LT3oeuKAxUpRmwGHa8dC3wQM3oECCQQAA alt="eagle" ></li>
+        <li><img width="200px" id="cat"   https://www.google.com/imgres?q=images&imgurl=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2015%2F04%2F23%2F22%2F00%2Fnew-year-background-736885_1280.jpg&imgrefurl=https%3A%2F%2Fpixabay.com%2Fphotos%2Ftree-sunset-clouds-sky-silhouette-736885%2F&docid=J7zy-dl2IZQspM&tbnid=aVgXecnmQ_f1MM&vet=12ahUKEwjM0LT3oeuKAxUpRmwGHa8dC3wQM3oECFoQAA..i&w=1280&h=797&hcb=2&ved=2ahUKEwjM0LT3oeuKAxUpRmwGHa8dC3wQM3oECFoQAA alt="cat"></li>
+        <li><a href="www.google.co.in" id="google">google</a></li>
+            
+    </ul>
+    </div>
+</body>
+<script>
+    document.querySelector('#scorpian').onclick=function (){
+        alert('you clicked on scorpian')}
+    
+    document.querySelector('#eagle').addEventListener('click',function(e){
+        console.log('you have clicked on eagle')
+        console.log(e)
+
+    },false)
+
+    // Here we are going to learn about the event propagation :- bubbling mode and prevent mode 
+    // Bubbling mode 
+    //  document.querySelector('#images').addEventListener('click',function (e){
+    //  console.log("click on the ul")
+    //  },false)
+    //  document.querySelector('#eagle').addEventListener('click',function(e){
+    //  console.log('you have clicked on eagle')
+    //  }, false )
+    //  Prevent mode 
+
+    //  document.querySelector('#images').addEventListener('click',function (e){
+    //  console.log("click on the ul")
+    //  },true)
+    //  document.querySelector('#eagle').addEventListener('click',function(e){
+    //  console.log('you have clicked on eagle')
+
+    //  }, true )
+
+      document.querySelector('#images').addEventListener('click',function (e){
+     console.log("click on the ul")
+     },false)
+     document.querySelector('#eagle').addEventListener('click',function(e){
+
+     console.log('you have clicked on eagle')
+     e.stopPropagation()
+     }, false )
+    
+    
+    // document.querySelector('#google').addEventListener('click',function(e){
+    //    e.preventDefault()  
+    //    console.log("hello world")
+    // })
+    
+    // document.getElementById('images').addEventListener('click',function (e){
+    //    console.log(e.target)
+    //  //  console.log(e.target.parentNode)
+    //  //  console.log(e.target.tagName)
+    //     if(e.target.tagName==="IMG"){
+    //    let removeIt=e.target.parentNode
+    //    removeIt.remove()
+    //     }
+    //    removeIt.parentNode.removeChild(removeIt)
+
+
+    // })
+</script>
+
+</html>

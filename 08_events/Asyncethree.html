@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chai aur code</h1>
+    <button id="Start">Start</button>
+    <button id="End">End</button>
+</body>
+<script>
+    const myname=function (str){
+        const newdate =new Date()
+        console.log(str,newdate.toLocaleString())
+    }
+
+   
+    document.querySelector('#Start').addEventListener('click',function(e){
+        const intervalid=setInterval(myname,1000,"Nitesh Dwivedi")
+    
+    console.log("Start")
+    document.querySelector('#End').addEventListener('click',function(e){
+       
+        
+
+       clearInterval(intervalid)
+       console.log("Stopped")
+       })
+    })  
+    
+
+
+    
+</script>
+</html>

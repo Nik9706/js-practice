@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outerMost{
+            border:10px solid red;
+            padding: 10px;
+            width: 0 auto;
+            text-align: center;
+            margin: 10px;
+        }
+        #MiddleMost{
+            border:10px solid red;
+            padding: 10px;
+            width: 0 auto;
+            text-align: center;
+            margin: 10px;
+        }
+        #InnerMost{
+            border:10px solid red;
+            padding: 10px;
+            width: 0 auto;
+            text-align: center;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="outerMost">outermost
+    <div id="MiddleMost">Middlemost
+    <div id="InnerMost">Innermost
+    </div>
+    </div>
+</div>
+</body>
+<script>
+    document.querySelector('#outerMost').addEventListener('click',function(e){
+        console.log("you have click on Outermost")
+        console.log(e)
+    },true)
+
+
+
+    document.querySelector("#MiddleMost").addEventListener('click',function(e){
+        console.log("you have click on MiddleMost")
+    },true)
+    document.querySelector("#InnerMost").addEventListener('click',function(e){
+        console.log("you have click on InnerMost")
+    },true)
+</script>
+</html>
