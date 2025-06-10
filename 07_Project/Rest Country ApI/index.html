@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Country API</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="center">
+            <div class="First">
+                <form onsubmit="getAPIData();return false">
+                    <input type="search" id="search" placeholder="Enter Country name to search">
+                    <button type="submit">Search</button>
+                </form> 
+            </div>
+            <div class="Second">
+                <table> 
+                    <tr>
+                        <th> Offical name</th>
+                        <td id="name"></td>
+                    </tr>
+                    <tr>
+                        <th> capital</th>
+                        <td id="capital"></td>
+                    </tr>
+                    <tr>
+                        <th>flags</th>
+                        <td><img id="flags" alt="" </td>
+                    </tr>
+                    <tr>
+                        <th>population</th>
+                        <td id="population"></td>
+                    </tr>
+                    <tr>
+                        <th>area</th>
+                        <td id="area"></td>
+                    </tr>
+                    <tr>
+                        <th>region</th>
+                        <td id="region"></td>
+                    </tr>
+
+                    <tr>
+                        <th>subregion</th>
+                        <td id="subregion"></td>
+                    </tr>
+                    <tr>
+                        <th>continents</th>
+                        <td id="continents"></td>
+                    </tr>
+                    <tr>
+                        <th>borders</th>
+                        <td id="borders"></td>
+                    </tr>
+                    <tr>
+                        <th>timezones</th>
+                        <td id="timezones"></td>
+                    </tr>
+                    <tr>
+                        <th>landlocked</th>
+                        <td id="landlocked"></td>
+                    </tr>
+                    <tr>
+                        <th>independent</th>
+                        <td id="independent"></td>
+                    </tr>
+                    <tr>
+                        <th>Map</th>
+                        <td id="maps">View GoogleMaps</td>
+                    </tr>
+
+
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
